@@ -25,7 +25,8 @@ function save(id, text) {
         text: text
     }
     data.push(newRecord);
-    fs.writeFileSync('./app/data/data_api.json', JSON.stringify(data), 'utf8')
+    fs.writeFileSync('./app/data/data_api.json', JSON.stringify(data), 'utf8');
+    return newRecord;
 }
 
 function remove(id){
