@@ -1,11 +1,13 @@
 var express = require('express');
 var app = express();
+var cors = require('cors');
 
 const bodyParser = require('body-parser');
 
 app.set('port', process.env.PORT || 3000 );
 
-app.use(bodyParser.urlencoded({ extended: true }));
+app.use(bodyParser.json());
+app.use(cors());
 
 app.use('/api/eneida', require('./routes/api'));
 

@@ -9,15 +9,15 @@ exports.find_by_id = function(req, res) {
 };
 
 exports.save = function(req, res){
-	Eneida.save(req.params.id, req.body.text);
+	Eneida.save(req.params.id, req.body);
 	res.statusCode = 204;
 	res.end();
 }
 
 exports.add = function(req, res){
-	var record = Eneida.add(req.body.text);
+	var record = Eneida.add(req.body);
 	res.statusCode = 201;
-	res.json('{ "message": "The item was created successfully" }');
+	res.json(record);
 }
 
 exports.remove = function(req, res){

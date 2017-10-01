@@ -8,25 +8,26 @@ function findAll() {
 function findById(id) {
     return data.filter(function(e) {
         return e.id === id;
-    });
+    })[0];
 }
 
-function save(id, text) {
+function save(id, record) {
    var element = data.filter(function(e) { return e.id === id;})[0];
-   element.text = text;
+   element.text = record.text;
    fs.writeFileSync('./app/data/data_api.json', JSON.stringify(data), 'utf8')
 }
 
- function add(text) {
-    var arrayOfIds = data.map(function(item){ return Number(item.id);});
+ function add(record) {
+    var arrayOfIds = data
+        .filter(function(e) { return e.id; })
+        .map(function(e) { return Number(e.id);});
+
     var maxIndex = Math.max.apply(null, arrayOfIds);
-    var newRecord = {
-        id: String(maxIndex+1),
-        text: text
-    }
-    data.push(newRecord);
+
+    record.id = String(maxIndex+1);
+    data.push(record);
     fs.writeFileSync('./app/data/data_api.json', JSON.stringify(data), 'utf8');
-    return newRecord;
+    return record;
 }
 
 function remove(id){
