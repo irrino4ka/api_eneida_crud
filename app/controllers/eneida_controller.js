@@ -10,6 +10,7 @@ exports.find_by_id = function(req, res) {
 
 exports.save = function(req, res){
 	Eneida.save(req.params.id, req.body);
+	console.log(req.body);
 	res.statusCode = 204;
 	res.end();
 }
