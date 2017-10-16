@@ -31,8 +31,8 @@ function save(id, record) {
 }
 
 function remove(id){
-    var deleteRow = data.filter(function(e) {return e.id !== id;});
-    fs.writeFileSync('./app/data/data_api.json', JSON.stringify(deleteRow), 'utf8')
+    data = data.filter(function(e) {return e.id !== id;});
+    fs.writeFileSync('./app/data/data_api.json', JSON.stringify(data), 'utf8')
 }
 
 module.exports = {
