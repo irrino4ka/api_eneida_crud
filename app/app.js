@@ -9,7 +9,7 @@ app.set('port', process.env.PORT || 3000 );
 app.use(bodyParser.json());
 app.use(cors());
 
-app.use('/api/eneida', require('./routes/api'));
+app.use('/api/patients', require('./routes/api'));
 
 var server = app.listen(app.get('port'), function() {
   console.log('Listening on port ' + app.get('port'));

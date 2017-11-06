@@ -23,11 +23,14 @@ function save(id, record) {
         .map(function(e) { return Number(e.id);});
 
     var maxIndex = Math.max.apply(null, arrayOfIds);
-
-    record.id = String(maxIndex+1);
-    data.push(record);
+    var rec_data ={
+        id: String(maxIndex+1),
+        text: record.text
+    }
+    
+    data.push(rec_data);
     fs.writeFileSync('./app/data/data_api.json', JSON.stringify(data), 'utf8');
-    return record;
+    return rec_data;
 }
 
 function remove(id){
