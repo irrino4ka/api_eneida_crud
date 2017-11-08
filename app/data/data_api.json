@@ -158,5 +158,41 @@
     {
         "id": "40",
         "text": "Leonardo di ser Piero da Vinci"
+    },
+        {
+        "id": "41",
+        "text": "Bobby Lobby"
+    },
+    {
+        "id": "42",
+        "text": "Luke Besson"
+    },
+    {
+        "id": "43",
+        "text": "Toddo Motto"
+    },
+    {
+        "id": "44",
+        "text": "John Papa"
+    },
+    {
+        "id": "45",
+        "text": "Ivan Ivanov"
+    },
+    {
+        "id": "46",
+        "text": "Bill Gates"
+    },
+    {
+        "id": "47",
+        "text": "Ada Lovelace"
+    },
+    {
+        "id": "48",
+        "text": "Augusta Ada Byron"
+    },
+    {
+        "id": "49",
+        "text": "Leonardo di ser Piero da Vinci"
     }
 ]
